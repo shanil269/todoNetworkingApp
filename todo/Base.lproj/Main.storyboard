@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--TodoVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TodoVC" customModule="todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="LU8-7h-MsU">
+                                <rect key="frame" x="20" y="57" width="374" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="x8B-Vt-Rib"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Wml-7t-Epa">
+                                <rect key="frame" x="20" y="107" width="374" height="32"/>
+                                <segments>
+                                    <segment title="Low"/>
+                                    <segment title="Medium"/>
+                                    <segment title="High"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.42243685787671231" green="0.53916553345890406" blue="0.87692636986301364" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="lCh-eh-WUh">
+                                <rect key="frame" x="20" y="163" width="374" height="553"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TodoCell" rowHeight="75" id="mlf-AC-TXV" customClass="TodoCell" customModule="todo" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="mlf-AC-TXV" id="wt1-dX-NN5">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy a dozen egges" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="zlO-Xc-dVj">
+                                                    <rect key="frame" x="20" y="11" width="271" height="53"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SdQ-iC-ghH">
+                                                    <rect key="frame" x="301" y="11" width="53" height="53"/>
+                                                    <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="53" id="VAx-ze-ATd"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zlO-Xc-dVj" secondAttribute="bottom" id="AcL-fR-pep"/>
+                                                <constraint firstItem="SdQ-iC-ghH" firstAttribute="trailing" secondItem="wt1-dX-NN5" secondAttribute="trailingMargin" id="NPK-y4-sLL"/>
+                                                <constraint firstItem="SdQ-iC-ghH" firstAttribute="bottom" secondItem="wt1-dX-NN5" secondAttribute="bottomMargin" id="PdM-tU-Vug"/>
+                                                <constraint firstItem="zlO-Xc-dVj" firstAttribute="top" secondItem="wt1-dX-NN5" secondAttribute="topMargin" id="QxK-uF-mL6"/>
+                                                <constraint firstItem="zlO-Xc-dVj" firstAttribute="leading" secondItem="wt1-dX-NN5" secondAttribute="leadingMargin" id="VC7-kx-XO6"/>
+                                                <constraint firstItem="SdQ-iC-ghH" firstAttribute="leading" secondItem="zlO-Xc-dVj" secondAttribute="trailing" constant="10" id="Zed-KT-MJx"/>
+                                                <constraint firstItem="SdQ-iC-ghH" firstAttribute="top" secondItem="wt1-dX-NN5" secondAttribute="topMargin" id="Zzz-dF-Wto"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="itemLbl" destination="zlO-Xc-dVj" id="Bjq-Kd-baB"/>
+                                            <outlet property="priorityView" destination="SdQ-iC-ghH" id="EPf-Sg-cIE"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyV-53-AYe">
+                                <rect key="frame" x="372" y="20" width="22" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="Upl-L7-es2"/>
+                                    <constraint firstAttribute="width" constant="22" id="rT5-f9-0ds"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="addTodo:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xut-OT-IG7"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eyV-53-AYe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="3lM-5z-6jQ"/>
+                            <constraint firstItem="lCh-eh-WUh" firstAttribute="top" secondItem="Wml-7t-Epa" secondAttribute="bottom" constant="25" id="QIw-B0-3xs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Wml-7t-Epa" secondAttribute="trailing" constant="20" id="QlQ-v4-KU4"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eyV-53-AYe" secondAttribute="trailing" constant="20" id="Vkd-DR-Zcd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="lCh-eh-WUh" secondAttribute="bottom" constant="20" id="YVb-KD-kNc"/>
+                            <constraint firstItem="lCh-eh-WUh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="apg-TS-oi7"/>
+                            <constraint firstItem="Wml-7t-Epa" firstAttribute="top" secondItem="LU8-7h-MsU" secondAttribute="bottom" constant="20" id="eQw-Ug-ZIh"/>
+                            <constraint firstItem="LU8-7h-MsU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="fsb-X0-v6A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LU8-7h-MsU" secondAttribute="trailing" constant="20" id="ij8-Lg-mUr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lCh-eh-WUh" secondAttribute="trailing" constant="20" id="l89-Q0-vXg"/>
+                            <constraint firstItem="Wml-7t-Epa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vXM-Jp-m6s"/>
+                            <constraint firstItem="LU8-7h-MsU" firstAttribute="top" secondItem="eyV-53-AYe" secondAttribute="bottom" constant="15" id="xNF-xd-iiY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="prioritySegment" destination="Wml-7t-Epa" id="C1U-Gf-X30"/>
+                        <outlet property="tableView" destination="lCh-eh-WUh" id="VlH-3I-P5c"/>
+                        <outlet property="todoItemTxt" destination="LU8-7h-MsU" id="hRW-LL-wZz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.61956521739131"/>
+        </scene>
+    </scenes>
+</document>
